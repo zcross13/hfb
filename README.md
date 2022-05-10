@@ -1,3 +1,11 @@
+---
+track: "Teams"
+title: "Git"
+week: 23
+day: 1
+type: "lecture"
+---
+
 # Happy Fun Ball
 
 ## A Lesson on Git Branches and Merging
@@ -45,7 +53,7 @@ Here is a table of our commonly used git commands that we've used in this course
 | git | log| --oneline |  Shows a log of commits of a repo (--oneline shows a truncated message)_`q` to exit_|
 | git | status |  |  Shows the state of files in a repo (untracked, modified, staged)|
 
-[Link to our wiki with a more complete list of git commands](https://github.com/ga-students/wdi-remote-matrix/wiki/Git-Cheatsheet)
+[Link to a more complete list of git commands](https://www.git-tower.com/blog/git-cheat-sheet/)
 
 Note: `fork` is not on this list because `fork` is not a git command; it is github-specific for copying a repository on github to a new location on github.
 
@@ -98,24 +106,24 @@ As a professional developer, you will do whatever it takes to finish this projec
 #### Part 1 - Get the files
 ###### Browser - github:
 - Fork Happy-Fun-Ball (make a copy of this remote repository to your github account):
- - [Go here]( https://github.com/Krafalski/hfb) and click fork (upper right) to fork it to your personal repo (Don't worry! You can totally delete it after the lesson!)
-  <details><summary>Show Screenshot</summary> 
-  
+ - [Go here](https://github.com/bigpoppacode/hfb) and click fork (upper right) to fork it to your personal repo (Don't worry! You can totally delete it after the lesson!)
+  <details><summary>Show Screenshot</summary>
+
   ![Upper right on github](https://i.imgur.com/TjcbBOB.png)
-  
+
   </details>
 - Navigate to YOUR version on YOUR github repo
 - Click the 'clone or download' button (on the right, below fork).
   <details><summary>Show Screenshot</summary>
-  
+
   ![Copy or Clone button](https://i.imgur.com/6uAnb0R.png)
-  
+
 </details>
 This will give you the option to copy the link to your clipboard and make it ready to paste in the command line.
 - REMEMBER: This should be from YOUR repo (the link to be copied should be `git@github.com:your-github-handle/hfb.git`)
 
 ###### Command line:
-- Navigate to a directory **OUTSIDE** of wdi-remote-matrix
+- Navigate to a directory **that is not a repo**
 `mkdir` (if you need to)
 - ```$git clone `git@github.com:your-github-handle/hfb.git` ``` (use `⌘V` to paste the url from github)
 - The above command should create a new folder inside your current directory and make copy of everything in the Happy Fun Ball remote repository, locally (on your computer) and initialize git.
@@ -125,7 +133,7 @@ This will give you the option to copy the link to your clipboard and make it rea
     - `index.html` and
     - `main.css` are in your folder (`README.md` & `hfb.png` will also be there)
   - `git status`
-  
+
 <details><summary>Example output</summary>  
 
 `On branch master`<br>
@@ -190,18 +198,18 @@ We can configure git to have autocorrect, if it is not already set as a default.
 
 ###### Browser - github:
 - See your new branch on github (it should be there, refresh if you don't see it. If you still don't see it, let me know and we'll trouble shoot)
-It will be a new message along the top of github OR from clicking the `Branch: master` button <details><summary> Screeshot </summary> 
+It will be a new message along the top of github OR from clicking the `Branch: master` button <details><summary> Screeshot </summary>
 
 ![pull-down menu](https://i.imgur.com/oIptMUM.png)
 
 </details>
 
 ###### Command line:
-- `atom .`open the files in atom
-- `open index.html`open index.html in the browser (remember you can do `open i` and then press `tab` to autocomplete index.html)
+- `atom .`open the files in Atom
+- `open index.html` open index.html in the browser (remember you can do `open i` and then press `tab` to autocomplete index.html)
 
 #### Part 3 - Organize yourself
-We are going to be going between the browser, the command line and Atom frequently. Be sure you can work efficiently and effectively by setting up a good workflow! Start by organizing your browser, command line and Atom so that you can easily switch between them (don't forget to use Spectacle). Close extra tabs and browser windows.  <details><summary> Here is how I worked on this project(You will have to also account for Zoom and Slack): </summary>
+We are going to be going between the browser, the command line and Atom frequently. Be sure you can work efficiently and effectively by setting up a good workflow! Start by organizing your browser, command line and Atom so that you can easily switch between them (remember to use Spectacle). Close extra tabs and browser windows.  <details><summary> Here is how I worked on this project(You will have to also account for Zoom and Slack): </summary>
 
 ![window organization](https://i.imgur.com/WAUMTBR.png)
 
@@ -214,7 +222,6 @@ We are going to be going between the browser, the command line and Atom frequent
 
 **Atom:**
 - directory tree (toggle view: `⌘\`).
-  -  See all Atom shortcuts : `⌘⇧P`
 - index.html
 -  main.css
 
@@ -231,7 +238,7 @@ Your first new feature!  Working in `index.html`, you will add a link to `main.c
 - `git branch` - to check that you are on the `dev` branch. This command will show all the branches and highlight the one you are on. <details><summary>Example output:</summary>
 
  ![example output of `git branch`](https://i.imgur.com/2bKy3zL.png)
- 
+
 </details>
 
 
@@ -245,7 +252,7 @@ Your first new feature!  Working in `index.html`, you will add a link to `main.c
 ###### Atom - index.html :
 - In the index.html - between the` </title>` and `</head>` tags, let's insert a link to our css :
 - `<link rel="stylesheet" href="main.css">`
-- `⌘S` - Save our changes in atom
+- `⌘S` - Save our changes in Atom
 
 ###### Browser - index.html:
 - `⌘R` - Reload our browser view of the `index.html`
@@ -323,7 +330,7 @@ Note: if you do not get the yellow bar, you will have slightly different navigat
 - `git pull origin dev`
 
 - Check Atom (`index.html` has the link to CSS)
-- Your browser view (`index.html` is displaying with CSS loaded - don't forget to `⌘R`/refresh your browser to be sure you are seeing the updated version)
+- Your browser view (`index.html` is displaying with CSS loaded - remember to `⌘R`/refresh your browser to be sure you are seeing the updated version)
 
 - If everything looks good, let's merge these changes into the master branch
 
@@ -354,7 +361,7 @@ Note: if you do not get the yellow bar, you will have slightly different navigat
 - Wait for the page to update so you can
 - Compare `base: master` to `compare: dev`
 - Wait to be sure there are no conflicts
-- Green `Ceate pull request` button
+- Green `Create pull request` button
 - New screen that lets you add comments, midway to the right press green `Create pull request` button
 - green `Merge Pull Request` button
 - green `Confirm Pull Request` button
@@ -381,7 +388,7 @@ Note: if you do not get the yellow bar, you will have slightly different navigat
 
 ###### Atom - index.html:
 - You probably noticed that index.html had a typo! On (or around) line 19 `class="pr"` should actually be `class="price"`.
-- Let's update that! (Don't forget `⌘S`/save) Now, it's not really our task, or our file to work on, but we're just being proactive and  helpful! What could possibly be wrong with that?
+- Let's update that! (Remember `⌘S`/save) Now, it's not really our task, or our file to work on, but we're just being proactive and  helpful! What could possibly be wrong with that?
 
 ###### Command line:
 - Let's go ahead and
@@ -415,9 +422,9 @@ Make changes here in main.css ![main.css](https://i.imgur.com/1WY4xj8.png)
 
 Let's get back to our changes!
 ###### Command line:
-- `git checkout color-updates` (don't forget you can use `tab` to autocomplete branch names too!)
+- `git checkout color-updates` (remember you can use `tab` to autocomplete branch names too!)
 
-Go through atom and the browser to see that your changes have come back
+Go through Atom and the browser to see that your changes have come back
 
 ###### Atom - main.css:
 - Let's make one more color change, now that we are on our color-updates branch. `.price` change the color from orange, to whatever color you want
@@ -425,7 +432,7 @@ Go through atom and the browser to see that your changes have come back
 - `⌘F` will open a find/replace tab at the bottom of Atom and let you look for `.price`
 - `esc` to close the find/replace tab
 - make your changes (we are changing the color of elements with the class of `price`)
-- `⌘S` -Don't forget to save your file
+- `⌘S` -Remember to save your file
 - Refresh your browser to see your changes
 
 ### Starting on a New Feature When We Haven't Finished Our Previous One
@@ -572,7 +579,7 @@ Note: your numbers/letters after the `>>>>>>>` should be different
 - **Only working code should ever be merged to master!**
 
 - If everything is ok, go ahead and merge the changes to master
-- If you made changes, don't forget to
+- If you made changes, remember to
 - `git add` and
 -  `git commit -m ''`
 
@@ -599,3 +606,4 @@ Note: your numbers/letters after the `>>>>>>>` should be different
 
 ### Sudden and Permanent Shut Down of Wacky Products Incorporated
 - Well, it was fun while it lasted?
+
